@@ -1,0 +1,5 @@
+C:\sivam\Rock\JQuery_Webservices\JQuery_Ajax_Webservice\bin\JQuery_Ajax_Webservice.dll
+C:\sivam\Rock\JQuery_Webservices\JQuery_Ajax_Webservice\bin\JQuery_Ajax_Webservice.pdb
+C:\sivam\Rock\JQuery_Webservices\JQuery_Ajax_Webservice\obj\Debug\JQuery_Ajax_Webservice.csprojResolveAssemblyReference.cache
+C:\sivam\Rock\JQuery_Webservices\JQuery_Ajax_Webservice\obj\Debug\JQuery_Ajax_Webservice.dll
+C:\sivam\Rock\JQuery_Webservices\JQuery_Ajax_Webservice\obj\Debug\JQuery_Ajax_Webservice.pdb

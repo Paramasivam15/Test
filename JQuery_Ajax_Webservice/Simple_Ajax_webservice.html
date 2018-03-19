@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+    <script src="Script/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#btnSubmit').click(function () {
+                var param1 = $.trim($("#div_the_1").find("input:text").val());
+                var param2 = $.trim($("#div_the_2").find("input:text").val());
+                //we can use below code also
+                /*
+                var param1 = $.trim($("[id*=txtInput1]").val());
+                var param2 = $.trim($("[id*=txtInput2]").val());
+                */
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'Math.asmx/SumofNumber',
+                    data: "{ number1: '" + param1 + "', number2: " + param1 + "}",
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (response) {
+                        disp_the_div_generic(response.d);
+                    },
+                    error: function (error) {
+                        alert(error.responseText);
+                    }
+                });
+            });
+        });
+
+        function disp_the_div_generic(disp) {
+            $("#Div_result_fields").find("label[for =sumResult]").html(" Total value is " + JSON.stringify(disp));
+        }
+    </script>
+</head>
+
+<body>
+    <table border="0">
+        <tr>
+            <td>Number 1:
+            </td>
+            <td>
+                <div id="div_the_1">
+                    <input type="text" id="txtInput1" />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Number 2:
+            </td>
+            <td>
+                <div id="div_the_2">
+                    <input type="text" id="txtInput2" />
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td>
+                <div id="Div_result_fields">
+                    <label id="lblsum" for="sumResult" />
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td>
+                <input type="button" id="btnSubmit" value="Submit" />
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
